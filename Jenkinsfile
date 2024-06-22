@@ -5,7 +5,7 @@ pipeline {
         stage('Preparação do Ambiente') {
             steps {
                 
-                sh pip install -r levenshtein
+                sh 'pip install -r levenshtein'
             }
         }
 
