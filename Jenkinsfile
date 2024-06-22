@@ -5,7 +5,7 @@ pipeline {
         stage('Preparação do Ambiente') {
             steps {
                 
-                sh 'apt install -r levenshtein'
+                sh 'apt install levenshtein'
             }
         }
 
