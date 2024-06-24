@@ -3,7 +3,7 @@ pipeline {
         docker {
             image 'devopsjourney1/myjenkinsagents:python'
             label 'docker-agent-python' 
-            args '-u root:root' 
+            
         }
     }
     stages {
