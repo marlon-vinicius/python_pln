@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent docker-agent-python
 
     stages {
         stage('Preparação do Ambiente') {
