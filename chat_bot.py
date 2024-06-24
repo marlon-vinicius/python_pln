@@ -1,3 +1,4 @@
+pip install levnesthein
 import Levenshtein
 
 def carregar_perguntas(arquivo):
