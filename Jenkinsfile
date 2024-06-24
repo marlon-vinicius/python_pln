@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    }
     stages {
         stage('Preparação do Ambiente') {
             steps {
