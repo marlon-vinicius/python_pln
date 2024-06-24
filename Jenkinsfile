@@ -1,16 +1,17 @@
 pipeline {
     agent any
+
     stages {
         stage('Preparação do Ambiente') {
             steps {
                 
-                echo 'ja instalado'
+                sh 'pip install -r requisitos.txt'
             }
         }
 
         stage('Execução do Teste Levenshtein') {
             steps {
-                sh 'python3 levenshtein_teste.py'
+                sh 'python levenshtein_teste.py'
             }
         }
 
