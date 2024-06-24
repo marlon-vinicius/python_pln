@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'devopsjourney1/myjenkinsagents:python'
-            label 'docker-agent-python' 
-            
-        }
+    agent any
     }
     stages {
         stage('Preparação do Ambiente') {
