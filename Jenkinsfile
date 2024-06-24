@@ -5,6 +5,7 @@ pipeline {
             label 'docker-agent-python' 
             args '-u root:root' 
         }
+    }
     stages {
         stage('Preparação do Ambiente') {
             steps {
