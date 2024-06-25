@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     stages {
-//       stage('Preparação do Ambiente') {
-//           steps {
-//                bat 'pip install -r requisitos.txt'
-//            }
-//        }
+       stage('Preparação do Ambiente') {
+           steps {
+                bat 'pip install -r requisitos.txt'
+           }
+        }
 
         stage('Execução do Teste Levenshtein') {
             steps {
