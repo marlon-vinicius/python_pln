@@ -4,13 +4,13 @@ pipeline {
     stages {
        stage('Preparação do Ambiente') {
            steps {
-                bat 'pip install -r requisitos.txt'
+                pip install -r requisitos.txt
            }
         }
 
         stage('Execução do Teste Levenshtein') {
             steps {
-                bat 'python levenshtein_teste.py'
+                python levenshtein_teste.py
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
 
         stage('Execução do Chatbot') {
             steps {
-                bat 'python chat_bot.py'
+                python chat_bot.py
             }
         }
     }
