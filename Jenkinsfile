@@ -5,6 +5,11 @@ pipeline {
         PATH = "C:\\Windows\\System32;C:\\Users\\Marlon\\AppData\\Local\\Programs\\Python\\Python312;C:\\Users\\Marlon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts;${env.PATH}"
     }
 
+    parameters {
+        string(name: 'DISTANCIA', description: 'Limiar de distancia de busca.')
+        string(name: 'PERGUNTA', description: 'Pergunta a ser feita')
+    }
+
     stages {
        stage('Preparação do Ambiente') {
            steps {
@@ -32,7 +37,7 @@ pipeline {
 
         stage('Execução do Chatbot') {
             steps {
-                bat 'python chat_bot.py'
+                bat 'python chat_bot.py ${env.DISTANCIA} ${env.PERGUNTA}'
             }
         }
     }
