@@ -1,4 +1,5 @@
 import Levenshtein
+import sys
 
 def carregar_perguntas(arquivo):
   perguntas_respostas = {}
@@ -27,7 +28,7 @@ if __name__ == "__main__":
   perguntas_respostas = carregar_perguntas("perguntas.txt")
   limiar_distancia = 10
   
-  pergunta = "quem é voce?"
+  pergunta = sys.argv[1]
     
   resposta = encontrar_resposta(pergunta, perguntas_respostas, limiar_distancia)
   print("Resposta:", resposta)
