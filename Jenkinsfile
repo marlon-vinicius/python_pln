@@ -6,7 +6,6 @@ pipeline {
     }
 
     parameters {
-        string(name: 'DISTANCIA', description: 'Limiar de distancia de busca.')
         string(name: 'PERGUNTA', description: 'Pergunta a ser feita')
     }
 
@@ -37,7 +36,7 @@ pipeline {
 
         stage('Execução do Chatbot') {
             steps {
-                bat 'python chat_bot.py ${env.DISTANCIA} ${env.PERGUNTA}'
+                bat 'python chat_bot.py ${env.PERGUNTA}'
             }
         }
     }
