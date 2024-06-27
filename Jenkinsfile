@@ -36,8 +36,7 @@ pipeline {
 
         stage('Execução do Chatbot') {
             steps {
-                def pergunta = params.PERGUNTA
-                bat 'python chat_bot.py "${pergunta}"'
+                bat 'python chat_bot.py \"${PERGUNTA}\"'
             }
         }
     }
