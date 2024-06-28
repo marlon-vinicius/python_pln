@@ -55,7 +55,7 @@ pipeline {
         success {
             mail(
                 subject: "${JOB_NAME}.${BUILD_NUMBER} PASSED",
-                to: "$email",
+                to: "marlon.vinicius2@gmail.com",
                 body: "${JOB_NAME}.${BUILD_NUMBER} PASSED"
             )
         }
