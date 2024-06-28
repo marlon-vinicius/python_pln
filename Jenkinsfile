@@ -47,14 +47,14 @@ pipeline {
     post {
         failure {
             mail(
-                subject: "${JOB_NAME}.${BUILD_NUMBER} FAILED",
+                subject: "${JOB_NAME} #${BUILD_NUMBER} FAILURE",
                 to: "marlon.vinicius2@gmail.com",
                 body: "O build do projeto ${JOB_NAME} falhou :/ "
             )
         }
         success {
             mail(
-                subject: "${JOB_NAME}.${BUILD_NUMBER} PASSED",
+                subject: "${JOB_NAME} #${BUILD_NUMBER} SUCCESS",
                 to: "marlon.vinicius2@gmail.com",
                 body: "O build do projeto ${JOB_NAME} funcionou corretamente!! "
             )
